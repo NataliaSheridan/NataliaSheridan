@@ -1,17 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#navbar {
+  position: fixed;
+  background-color: #7829da;
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+.nav-list ul {
+  list-style-type: none;
+}
 html{
-    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-#navbar{
-background-color: #7829da;
+
+.nav-list a {
+  text-decoration: none;
+  color: #f0f0f0;
+  padding: 1.5rem;
+  display: block;
+  font-size: xx-large;
 }
-.nav-list{
-display:flex;
-justify-content: flex-end;
+.nav-list a:hover {
+  background-color: #9a4bfc;
 }
-.nav-list ul{
-    list-style-type: none;
+#welcome-section {
+  background-color: #7289da;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-a{
-    text-decoration: none;
-    color:#f0f0f0;
+#projects {
+    display: flex;
+    justify-content:center;
+}
+    
+.projects-grid { 
+    display: flex;
+    flex-wrap:wrap;
+}
+    
+.dragon{
+    height: 150px;
+    Width:auto;
+    flex-wrap:wrap;
+
+}
+.project-tile {
+    margin:2rem;
+}
+#contact {
+    background-color: #dea5a4;
 }
