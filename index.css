@@ -5,19 +5,21 @@
 }
 #navbar {
   position: fixed;
-  background-color: #7829da;
+  background-color: #1f1d59;
   width: 100%;
 }
 .nav-list {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
+  margin: 1rem;
 }
-.nav-list ul {
-  list-style-type: none;
-}
-html{
+/*980 px/ 16px= 61.25em */
+@media (max-width: 980px) {
+  html {
     scroll-behavior: smooth;
+    font-size: 40%;
+  }
 }
 
 .nav-list a {
@@ -28,35 +30,118 @@ html{
   font-size: xx-large;
 }
 .nav-list a:hover {
-  background-color: #9a4bfc;
+  background-color: #3aa9d9;
 }
 #welcome-section {
-  background-color: #7289da;
+  background-color: #76bf41;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#projects {
-    display: flex;
-    justify-content:center;
-}
-    
-.projects-grid { 
-    display: flex;
-    flex-wrap:wrap;
-}
-    
-.dragon{
-    height: 150px;
-    Width:auto;
-    flex-wrap:wrap;
 
+#projects {
+  width: 100%;
+}
+
+#projects-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  background-color: #7eddf2;
+}
+
+.dragon {
+  height: 150px;
+  width: auto;
+  flex-wrap: wrap;
+  display: flex;
 }
 .project-tile {
-    margin:2rem;
+  margin: 2rem;
 }
 #contact {
-    background-color: #dea5a4;
+  background-color: #7eddf2;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact div a {
+  width: 100%;
+  justify-content: space-evenly;
+}
+h1 {
+  color: #ffffff;
+  font-family: fantasy;
+  font-size: xx-large;
+  text-shadow: 4px 4px 4px #1f1d59;
+}
+h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: fantasy;
+  text-shadow: 4px 4px 4px #1f1d59;
+  font-size: x-large;
+}
+p {
+  color: #ffffff;
+  text-align: center;
+  font-family: fantasy;
+  text-shadow: 4px 4px 4px #1f1d59;
+  font-size: x-large;
+}
+footer {
+  color: #1f1d59;
+  font-family: cursive;
+}
+H4 {
+  font-size: xx-large;
+  color: #7eddf2;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 4px 4px 4px#1f1d59;
+  text-align: center;
+}
+.phone {
+  width: 50px;
+  height: 50px;
+}
+.github {
+  width: 50px;
+  height: 50px;
+}
+.email {
+  width: 50px;
+  height: 50px;
+}
+.twitter {
+  width: 50px;
+  height: 50px;
+}
+.linkedin {
+  width: 50px;
+  height: 50px;
+}
+.icons:hover {
+  background-color: #1f1d59;
+  color: #76bf41;
+  transform: scale(1.5);
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin:0 auto;
+}
+.caption {
+  color: #1f1d59;
+  font-family: cursive;
+}
+.divicons{
+  display:flex;
+  justify-content: space-evenly;
 }
