@@ -1,0 +1,21 @@
+header {
+    background-color: blue;
+    color:#ffff;
+}
+
+img {
+    border: 8px solid gold;
+}
+figure {
+    background-color:black;
+}
+    figcaption {
+        color: #ffff;
+        text-align: center;
+        font-size: xx-large;
+}
+
+main { display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
