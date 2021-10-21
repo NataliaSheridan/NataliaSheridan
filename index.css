@@ -5,7 +5,7 @@
 }
 #navbar {
   position: fixed;
-  background-color: #1f1d59;
+  background-color: #011140;
   width: 100%;
 }
 .nav-list {
@@ -30,10 +30,10 @@
   font-size: xx-large;
 }
 .nav-list a:hover {
-  background-color: #3aa9d9;
+  background-color:#0460d9;
 }
 #welcome-section {
-  background-color: #76bf41;
+  background-color: #03258C;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 
-  background-color: #7eddf2;
+  background-color: #d92e1e;
 }
 
 .dragon {
@@ -64,7 +64,7 @@
   margin: 2rem;
 }
 #contact {
-  background-color: #7eddf2;
+  background-color: #d92e1e;
   height: 20vh;
   justify-content: center;
   align-items: center;
@@ -95,14 +95,14 @@ p {
   font-size: x-large;
 }
 footer {
-  color: #1f1d59;
+  color: #ffffff;
   font-family: cursive;
 }
 H4 {
   font-size: xx-large;
-  color: #7eddf2;
+  color: #400101;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-shadow: 4px 4px 4px#1f1d59;
+  text-shadow: 4px 4px 4px#240404;
   text-align: center;
 }
 .phone {
@@ -138,7 +138,7 @@ H4 {
   margin:0 auto;
 }
 .caption {
-  color: #1f1d59;
+  color: #ffffff;
   font-family: cursive;
 }
 .divicons{
