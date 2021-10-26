@@ -11,10 +11,20 @@ header {
 button {
   font-size: x-large;
   background-color: aqua;
+  border-radius:10px;
+}
+
+button:hover{
+  background-color: bisque;
+
 }
 main {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  figure {
+    margin: 8px;
   }
   
   figure img {
