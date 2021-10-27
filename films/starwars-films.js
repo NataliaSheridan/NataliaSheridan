@@ -1,5 +1,5 @@
 import { films} from '../data/films.js'
-import { getLastNumber } from'../utils/index.js'
+import { getLastNumber } from '../utils/index.js'
 let filmList = document.querySelector('filmlist')
 console.log('filmlist')
 let titlelist = document.createElement('ol')
