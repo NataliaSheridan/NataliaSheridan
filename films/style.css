@@ -1,6 +1,11 @@
+*{
+    background-color: black;
+}
 header {
     background-color: blue;
     color:#ffff;
+    font-size: x-large;
+    text-align: center;
 }
 
 img {
