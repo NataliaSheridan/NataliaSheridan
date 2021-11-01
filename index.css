@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Fruktur', cursive;
 }
 #navbar {
   position: fixed;
@@ -13,6 +14,7 @@
   justify-content: flex-end;
   list-style-type: none;
   margin: 1rem;
+  font-family: 'Fruktur', cursive;
 }
 /*980 px/ 16px= 61.25em */
 @media (max-width: 980px) {
@@ -76,7 +78,7 @@
 }
 h1 {
   color: #ffffff;
-  font-family: fantasy;
+  font-family: 'Fruktur', cursive;
   font-size: xx-large;
   text-shadow: 4px 4px 4px #1f1d59;
 }
@@ -86,6 +88,7 @@ h2 {
   font-family: fantasy;
   text-shadow: 4px 4px 4px #1f1d59;
   font-size: x-large;
+  font-family: 'Fruktur', cursive;
 }
 p {
   color: #ffffff;
@@ -93,15 +96,16 @@ p {
   font-family: fantasy;
   text-shadow: 4px 4px 4px #1f1d59;
   font-size: x-large;
+  font-family: 'Fruktur', cursive;
 }
 footer {
   color: #ffffff;
-  font-family: cursive;
+  font-family: 'Fruktur', cursive;
 }
 H4 {
   font-size: xx-large;
   color: #440505;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fruktur', cursive;
   text-shadow: 4px 4px 4px#240404;
   text-align: center;
 }
@@ -139,7 +143,7 @@ H4 {
 }
 .caption {
   color: #ffffff;
-  font-family: cursive;
+  font-family: 'Fruktur', cursive;
 }
 .divicons{
   display:flex;
