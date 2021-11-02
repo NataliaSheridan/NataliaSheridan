@@ -1,4 +1,41 @@
 *{
     font-family: 'Fruktur', cursive;
     background-color:black;
+    margin:0;
+    box-sizing: border-box;
+
 }
+.mainContainter {
+    display:flex;
+}
+
+header {
+    font-size:xx-large;
+    text-align: center;
+
+}
+h1 {
+    color:#ffff;
+    font-size: xx-large;
+  
+}
+
+section {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.shipName {
+font-size: x-large;
+color: blue;
+
+}
+
+.box {
+    background-color: blue;
+    font-size: x-large;
+    text-align: center;
+}
+

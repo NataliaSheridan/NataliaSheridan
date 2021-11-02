@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Sacramento&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fruktur&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
     <title>Star Wars Starships</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Starships of Starwars</h1>
+      <h1>Starships of Starwars</h1>
     </header>
     <main class="mainContainer">
-        <nav class="nav">
+      <nav class="nav">
         <ul class="navList"></ul>
-    </nav>
-    <section class="shipViewer"></section>
+      </nav>
+      <section class="shipViewer"></section>
     </main>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+          <h2 class="box"> This particular ship is cancelled</h1>
+        <!--Any other Bulma elements you want -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
     <footer>
-        <p>&copy; Natalia Sheridan Designs 2021</p>
+      <p>&copy; Natalia Sheridan Designs 2021</p>
     </footer>
     <script src="sw-starships.js" type="module"></script>
-</body>
+  </body>
 </html>
