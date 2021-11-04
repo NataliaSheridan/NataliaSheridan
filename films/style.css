@@ -7,6 +7,7 @@ header {
     color:#ffff;
     font-size: x-large;
     text-align: center;
+    text-shadow: 2px 2px 3px rgb(12, 12, 39);
 }
 
 img {
@@ -19,6 +20,7 @@ figure {
         color: #ffff;
         text-align: center;
         font-size: xx-large;
+        text-shadow: 2px 2px 3px rgb(221, 21, 21);
 }
 
 main { display: flex;

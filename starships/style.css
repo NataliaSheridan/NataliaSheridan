@@ -1,41 +1,51 @@
-*{
-    font-family: 'Fruktur', cursive;
-    background-color:black;
-    margin:0;
+* {
+    margin: 0;
     box-sizing: border-box;
-
-}
-.mainContainter {
-    display:flex;
-}
-
-header {
-    font-size:xx-large;
-    text-align: center;
-
-}
-h1 {
-    color:#ffff;
-    font-size: xx-large;
+    background-color: black;
+   
+  }
   
-}
-
-section {
-    width:100%;
-    display:flex;
+  header, footer {
+  font-family: 'Satisfy', cursive;
+  font-size: xx-large;
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+  
+  }
+  
+  .mainContainer{
+    display: flex;
+    
+  }
+  
+  .nav {
+    margin-left: 2em;
+  }
+  
+  section {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.shipName {
-font-size: x-large;
-color: blue;
-
-}
-
-.box {
-    background-color: blue;
-    font-size: x-large;
+    flex-direction: column;
+  }
+  
+  .box {
+    background-color: aqua;
+    font-size: xx-large;
     text-align: center;
-}
+  }
+  
+  .shipName {
+    font-size: xx-large;
+    color:blue;
+  }
 
+  body{
+    border-style: double;
+    margin:0;
+    padding:2em;
+    border: 5px solid #ffff00;
+  }
+
+ 
