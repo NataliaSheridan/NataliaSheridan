@@ -27,3 +27,8 @@ main { display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+body {
+    margin:0;
+    padding:2em;
+    border: 5px solid gold;
+}
