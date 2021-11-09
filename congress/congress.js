@@ -1,7 +1,8 @@
 import { senators } from '../data/senators.js'
-
+//import * as senatortest from '../data/senators.js'
+console.log(senators)
 const senatorDiv = document.querySelector('.senators')
-
+ 
 function simplifiedSenators(senatorArray) {
   return senatorArray.map(senator => {
     const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
