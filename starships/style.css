@@ -47,5 +47,15 @@
     padding:2em;
     border: 5px solid gold;
   }
+li:hover{
+color:white;
 
+}
+ a {
+   color:white;
+   font-size: x-large;
+ }
+a li {
+  color:rgb(93, 93, 252);
+}
  
