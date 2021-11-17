@@ -80,7 +80,7 @@ biggestWeasels.forEach(weasel => {
   listItem.textContent = weasel.name
   weaselOrderedList.appendChild(listItem)
 })
-
+ 
 populateSenatorDiv(simplifiedMembers().reduce((acc, senator) => {
   if(senator.loyaltyPct === 100) {
     acc.push(senator)
