@@ -88,6 +88,17 @@ populateSenatorDiv(simplifiedMembers().reduce((acc, senator) => {
   return acc
 }, []))
 
+function zoomin(){
+  var myImg = 
+  document.getElementById("zoom_img");
+  var currWidth = 
+  myImg.clientWidth;
+  if(currentWidth >= 1000){
+     alert("You're fully zoomed in!");
+    }else{
+      myImg.style.width = (currWidth + 100) + "px";
+    }
+    }
 
-//populateSenatorDiv(simplifiedMembers())
+
 
