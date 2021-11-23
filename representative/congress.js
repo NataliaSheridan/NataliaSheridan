@@ -1,7 +1,7 @@
 import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
 
-const members = [...senators, ...representatives] // modern combining arrays like a genus
+const members = [...senators, ...representatives] // modern combining arrays like a genius
 
 const senatorDiv = document.querySelector('.senators')
 const seniorityHeading = document.querySelector('.seniority')
@@ -42,12 +42,6 @@ function populateSenatorDiv(simpleSenators) {
   })
 }
 
-//const filterSenators = (prop, value) => simplifiedSenators().filter(senator => senator[prop] === value)
-  
-//const republicans = filterSenators('party', 'R')
-//const femaleSenators = filterSenators('gender', 'F')
-
-//console.log(republicans, femaleSenators)
 
 const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
   return acc.seniority > senator.seniority ? acc : senator 
@@ -65,6 +59,10 @@ const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
 const biggestWeasel = simplifiedMembers().reduce((acc, senator) => 
 (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
 
+//const members = members.filter(member => member.short_title === 'Rep.')
+//console.log(member)
+
+
 const biggestWeasels = simplifiedMembers().filter(senator => senator.missedVotesPct >= 50)
 
 console.log(biggestWeasels)
@@ -74,3 +72,30 @@ biggestWeasels.forEach(weasel => {
   listItem.textContent = weasel.name
   weaselOrderedList.appendChild(listItem)
 })
+//const representativesButton = document.createElement('button')
+//representativesButton.textContent = "representatives"
+//representativesButton.addEventListener('click', () => populateDOM(representativesButton))
+//mainHeader.appendChild(representativesButton)//
+
+//const representativesButton = representatives.filter=((house) => house.short_title === 'Rep.')
+
+const republicansButton = document.createElement('button')
+republicansButton.textContent = "republicans"
+republicansButton.addEventListener('click',() => populateDOM(republicans))
+mainHeader.appendChild(republicansButton)
+
+const republicans = members.filter((members)=> members.party === 'R')
+
+const democratsButton = document.createElement('button')
+democratsButton.textContent = "democrat"
+democratsButton.addEventListener('click',() => populateDOM(democrats))
+mainHeader.appendChild(democratsButton)
+
+const democrats = members.filter((members)=> members.party === 'D')
+
+
+
+
+
+
+

@@ -28,7 +28,7 @@ mainHeader.appendChild(othersButton)
 
 const maleCharacters = people.filter((person)=> person.gender === 'male')
 
-console.log(maleCharacters.length)
+console.log(femaleCharacters.length)
 const femaleCharacters = people.filter((person) => person.gender === 'female')
 
 console.log(femaleCharacters.length)
