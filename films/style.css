@@ -5,9 +5,12 @@
 header {
     background-color: blue;
     color:#ffff;
-    font-size: x-large;
+    font-size: xx-large;
     text-align: center;
     text-shadow: 2px 2px 3px rgb(12, 12, 39);
+    border: 2px solid blue;
+    border-radius: 10px 10px 10px 10px;
+    
 }
 
 img {

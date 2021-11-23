@@ -5,13 +5,20 @@
    
   }
   
-  header, footer {
+  header {
   font-family: 'Satisfy', cursive;
-  font-size: xx-large;
+  font-size: 4em;
   text-align: center;
   text-shadow: 1px 1px 2px #ffffff;
   
   }
+  footer {
+    font-family: 'Satisfy', cursive;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 1px 1px 2px #ffffff;
+    
+    }
   
   .mainContainer{
     display: flex;
@@ -39,6 +46,7 @@
   .shipName {
     font-size: xx-large;
     color:blue;
+    text-shadow: 3px 3px rgb(110, 110, 194);
   }
 
   body{
@@ -58,4 +66,12 @@ color:white;
 a li {
   color:rgb(93, 93, 252);
 }
- 
+ img {
+   border: 2px solid rgb(141, 141, 141);
+   border-radius:4px;
+   opacity: 1;
+   display: block;
+   transition:.10s ease;
+   backface-visibility: hidden;
+   box-shadow: 5px 5px  rgb(49, 48, 48);
+ }
