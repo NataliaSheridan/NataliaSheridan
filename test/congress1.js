@@ -1,4 +1,4 @@
-import { people } from '../data/representatives.j'
+import { people } from '../data/representatives.js'
 import { people } from '..data/senators.js'
 import { getLastNumber } from '../utils/index.js'
 
