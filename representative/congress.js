@@ -3,6 +3,11 @@ import { representatives } from '../data/representatives.js'
 
 const members = [...senators, ...representatives] // modern combining arrays like a genius
 
+const main = document.querySelector('#main')
+
+const mainHeader = document.createElement('header')
+document.body.insertBefore(mainHeader, main)
+
 const senatorDiv = document.querySelector('.senators')
 const seniorityHeading = document.querySelector('.seniority')
 const weaselOrderedList = document.querySelector('.weaselList')
@@ -79,19 +84,20 @@ biggestWeasels.forEach(weasel => {
 
 //const representativesButton = representatives.filter=((house) => house.short_title === 'Rep.')
 
-const republicansButton = document.createElement('button')
-republicansButton.textContent = "republicans"
-republicansButton.addEventListener('click',() => populateDOM(republicans))
-mainHeader.appendChild(republicansButton)
+//const filteredArray = people.Array.filter(person =>
+//person.short_title === "rep")
 
-const republicans = members.filter((members)=> members.party === 'R')
-
-const democratsButton = document.createElement('button')
-democratsButton.textContent = "democrat"
-democratsButton.addEventListener('click',() => populateDOM(democrats))
-mainHeader.appendChild(democratsButton)
-
-const democrats = members.filter((members)=> members.party === 'D')
+var filteredList = members
+.map(rep => {
+  return {
+    short_title: rep.Short_title,
+  };
+})
+.filter(short_title => {
+  // return if it is rep
+  return parseFloat(rep.short_title)==='rep';
+});
+  
 
 
 

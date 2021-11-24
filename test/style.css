@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Fruktur', cursive;
+  background-color: black;
+  color:white;
+
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(70, 70, 209);
+  padding: 2em 0;
+}
+button {
+  font-size: x-large;
+  background-color: blue;
+  border-radius:10px;
+}
+
+button:hover{
+  background-color:rgb(219, 57, 57);
+
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  figure {
+    margin: 8px;
+  }
+  
+  figure img {
+    width: 200px;
+  }
+  body{
+    margin:0;
+    padding:2em;
+    border: 5px solid gold;
+  }

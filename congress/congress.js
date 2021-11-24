@@ -100,4 +100,19 @@ function zoomin(){
     }
     }
 
+    
 
+  //const list = document.querySelector('list')
+
+    //const addList = (array, element) => { 
+      //array.forEach(item => {
+        //const div = document.createElement('li')
+        //div.textContent = item.
+        //element.appendChild(li)
+
+    //});
+  //}
+
+  //addList(peopleArray,list)
+
+  //const filteredArray = people.Array.filter(person => //person.short_title === 'rep')
