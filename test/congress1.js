@@ -39,7 +39,7 @@ const democrats = people.filter((person) => {
          person.party === 'd') { return person
         }
 })
-const republican = people.filter((person)=> person.short_title === 'R')
+const republican = people.filter((person)=> person.party === 'R')
 
 
 
@@ -65,3 +65,21 @@ getLastNumber(element.url)
     
 })
 }
+
+function simplifiedMembers(chamberFilter) {
+    const filteredArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : member)
+  
+    return filteredArray.map(senator => {
+      const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+      return {
+        id: senator.id,
+        name: `${senator.first_name}${middleName}${senator.last_name}`,
+        party: senator.party,
+        imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
+        gender: senator.gender,
+        seniority: +senator.seniority,
+        missedVotesPct: senator.missed_votes_pct,
+        loyaltyPct: senator.votes_with_party_pct,
+      }
+    })
+  }
