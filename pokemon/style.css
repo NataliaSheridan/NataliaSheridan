@@ -13,12 +13,18 @@
     width: 100%;
     height: 100%;
     position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
 }
 
 .cardFace {
     width: 100%;
     height: 100%;
     position: absolute;
+    backface-visibility: hidden;
+}
+.card.is_flipped {
+    transform:rotateY(180deg);
 }
 
 .front {
@@ -28,4 +34,5 @@
 
 .back {
     background:seagreen;
+    transform:rotateY(180deg);
 }

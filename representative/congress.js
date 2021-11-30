@@ -87,16 +87,9 @@ biggestWeasels.forEach(weasel => {
 //const filteredArray = people.Array.filter(person =>
 //person.short_title === "rep")
 
-var filteredList = members
-.map(rep => {
-  return {
-    short_title: rep.Short_title,
-  };
-})
-.filter(short_title => {
-  // return if it is rep
-  return parseFloat(rep.short_title)==='rep';
-});
+
+
+
   
 
 

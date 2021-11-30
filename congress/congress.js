@@ -116,3 +116,20 @@ function zoomin(){
   //addList(peopleArray,list)
 
   //const filteredArray = people.Array.filter(person => //person.short_title === 'rep')
+
+
+  const buttons = 
+  document.getElementsByTagName('button');
+  console.log(button.length)
+  for(var i=0; i<buttons.length;i++) {
+    buttons[i].addEventListener('click',(e) =>{
+      getList(e.target.innerHTML);
+    })
+  }
+  function getList(type) {
+    type = type.toLowerCase()
+  }
+
+
+
+  

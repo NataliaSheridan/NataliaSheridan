@@ -20,16 +20,30 @@ async function getAPIData(url) {
     const pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     const pokeCard = document.createElement('div')
-    pokeCard.className = 'card'
-    const pokeFront = document.createElement('div')
-    pokeFront.className = 'cardFace front'
-    pokeFront.textContent = 'Front'
-    const pokeBack = document.createElement('div')
-    pokeBack.className = 'cardFace back'
-    pokeBack.textContent = singlePokemon.name
+    pokeCard.className = 'card' 
+    pokeCard.addEventListener('click', () => pokeCard.classList.toggle('is-flipped'))
+
+    const front = populateCardFront(singlePokemon)
+    const back = populateCardBack(singlePokemon)
+
+    
+
   
-    pokeCard.appendChild(pokeFront)
-    pokeCard.appendChild(pokeBack)
+    pokeCard.appendChild(front)
+    pokeCard.appendChild(back)
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
+  }
+  function populateCardFront(pokemon) {
+    const pokeFront = document.createElement('div')
+    pokeFront.className = 'cardFace front'
+        const pokeImg = document.createElement('img')
+    pokemon.src ='../images/pokeball.jpg'
+    return pokeFront
+  }
+  function populateCardBack(pokemon) {
+    const pokeBack = document.createElement('div')
+    pokeBack.className = 'cardFace back'
+    pokeFront.appendChild(pokeCaption)
+    return pokeBack
   }

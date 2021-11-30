@@ -1,4 +1,4 @@
-import { people } from '../data/representatives.js'
+import { people, representatives, representatives } from '../data/representatives.js'
 import { people } from '..data/senators.js'
 import { getLastNumber } from '../utils/index.js'
 
@@ -34,11 +34,7 @@ const Senators = people.filter((person) => person.short_title === 'Sen.')
 
 console.log(senators.length)
 
-const democrats = people.filter((person) => {
-    if(
-         person.party === 'd') { return person
-        }
-})
+const democrats = people.filter((person)=> person.party === 'D')
 const republican = people.filter((person)=> person.party === 'R')
 
 
@@ -82,4 +78,15 @@ function simplifiedMembers(chamberFilter) {
         loyaltyPct: senator.votes_with_party_pct,
       }
     })
+  }
+  const buttons = 
+  document.getElementsByTagName('button');
+  console.log(button.length)
+  for(var i=0; i<buttons.length;i++) {
+    buttons[i].addEventListener('click',(e) =>{
+      getList(e.target.innerHTML);
+    })
+  }
+  function getList(type) {
+    type = type.toLowerCase()
   }
