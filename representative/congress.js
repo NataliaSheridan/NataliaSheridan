@@ -97,11 +97,6 @@ repubtn.addEventListener('click', () => {
   populateSenatorDiv(republicans)
 })
 
-const clearbtn = document.getElementById("clear")
-clearbtn.addEventListener('click', () => {
-  removeCards()
-})
-
 const dembtn = document.getElementById("dem_btn")
 dembtn.addEventListener('click', () => {
   populateSenatorDiv(democrats)
