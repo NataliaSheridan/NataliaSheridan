@@ -1,8 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    
   }
-  
   .pokeGrid {
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +22,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    box-shadow: black 1px 1px 2px 0px;
   }
   
   .cardFace {
@@ -36,14 +37,36 @@
   }
   
   .front {
-    background: magenta;
+    background: rgb(236, 175, 221);
+    border: solid black 2px;
+    font-size: x-large;
   }
   
   .back {
-    background: mediumseagreen;
+    background: rgb(178, 236, 204);
     transform: rotateY(180deg);
+    border:outset black 2px;
+    font-size: x-large;
   }
   
   figure img {
     width: 200px;
+  }
+  body {
+      background-image: linear-gradient(to bottom right, pink,rgb(146, 217, 219),rgb(189, 230, 189));
+      font-family: 'Caveat', cursive;
+      color:white;  
+      text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
+  }
+  button{
+      color:white;
+      text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
+      background-color: rgb(146, 217, 219) ;
+      border-radius: 25px;
+      width: 200px;
+      height:40px;
+    
+  }
+  h1 {
+      font-size: 50px;
   }
