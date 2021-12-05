@@ -160,18 +160,27 @@ function getPokeTypeColor(pokeType) {
   }
 }
 
+//function populateCardBack(pokemon) {
+  //const pokeBack = document.createElement('div')
+  //pokeBack.className = 'cardFace back'
+  //const label = document.createElement('h4')
+  //label.textContent = 'Abilities:'
+  //pokeBack.appendChild(label)
+  //const abilityList = document.createElement('ul')
+  //pokemon.abilities.forEach((abilityItem) => {
+    //let listItem = document.createElement('li')
+    //listItem.textContent = abilityItem.ability.name
+    //abilityList.appendChild(listItem)
+  //})
+  //pokeBack.appendChild(abilityList)
+  //return pokeBack
+//}
 function populateCardBack(pokemon) {
-  const pokeBack = document.createElement('div')
+  const pokeBack = document.createElement('figure')
   pokeBack.className = 'cardFace back'
-  const label = document.createElement('h4')
-  label.textContent = 'Abilities:'
-  pokeBack.appendChild(label)
-  const abilityList = document.createElement('ul')
-  pokemon.abilities.forEach((abilityItem) => {
-    let listItem = document.createElement('li')
-    listItem.textContent = abilityItem.ability.name
-    abilityList.appendChild(listItem)
-  })
-  pokeBack.appendChild(abilityList)
-  return pokeBack
+  const pokeImg = document.createElement('img')
+  pokeImg.src = `https://i.etsystatic.com/6015221/r/il/7c5de2/2211249220/il_794xN.2211249220_8bj8.jpg`
+  pokeBack.appendChild(pokeImg)
+
+return pokeBack 
 }

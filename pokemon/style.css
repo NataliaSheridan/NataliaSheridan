@@ -58,6 +58,15 @@
     border:outset black 2px;
     font-size: x-large;
   }
+  .back img {
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width:190px;
+   height: auto;
+  }
   
   figure img {
     width: 200px;
