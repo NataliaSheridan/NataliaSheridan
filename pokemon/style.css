@@ -39,9 +39,19 @@
   .front {
     background: rgb(236, 175, 221);
     border: solid black 2px;
-    font-size: x-large;
+    font-size: large;
+    text-align: center;
   }
-  
+
+  .front img {
+    width: 130px;
+    height:auto; 
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
   .back {
     background: rgb(178, 236, 204);
     transform: rotateY(180deg);
@@ -51,9 +61,13 @@
   
   figure img {
     width: 200px;
+    outline: 2px solid white;
+    outline-offset: -5px;
+    background:silver;
   }
   body {
-      background-image: linear-gradient(to bottom right, pink,rgb(146, 217, 219),rgb(189, 230, 189));
+    background: rgb(188,161,221);
+    background: linear-gradient(180deg, rgba(188,161,221,1) 0%, rgba(120,189,198,1) 53%, rgba(0,212,255,1) 100%);
       font-family: 'Caveat', cursive;
       color:white;  
       text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
@@ -61,10 +75,11 @@
   button{
       color:white;
       text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
-      background-color: rgb(146, 217, 219) ;
+      background-color: rgb(0, 212, 255, 1) ;
       border-radius: 25px;
       width: 200px;
       height:40px;
+      
     
   }
   h1 {

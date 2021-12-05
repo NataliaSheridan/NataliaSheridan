@@ -149,3 +149,6 @@ H4 {
   display:flex;
   justify-content: space-evenly;
 }
+img {
+  box-shadow:1px 1px 2px 3px black;
+}

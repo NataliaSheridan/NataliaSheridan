@@ -98,10 +98,20 @@ function populateCardFront(pokemon) {
 
   const pokeCaption = document.createElement('figcaption')
   pokeCaption.textContent = pokemon.name
+
   pokeFront.appendChild(pokeImg)
   pokeFront.appendChild(pokeCaption)
-
-  //typesBackground(pokemon, pokeFront)
+ const label = document.createElement('h4')
+ label.textContent = 'abilities'
+ pokeFront.appendChild(label)
+  const abilityList = document.createElement('ul')
+  pokemon.abilities.forEach((abilityItem) => {
+    let listItem = document.createElement('li')
+    listItem.textContent = abilityItem.ability.name
+    abilityList.appendChild(listItem)
+  })
+    typesBackground(pokemon, pokeFront)
+    pokeFront.appendChild(abilityList)
   return pokeFront
 }
 
