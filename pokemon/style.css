@@ -43,6 +43,7 @@
     border: solid black 2px;
     font-size: large;
     text-align: center;
+    text-transform:capitalize;
   }
 
   .front img {
@@ -85,7 +86,7 @@
   button{
       color:white;
       text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
-      background-color: rgb(0, 212, 255, 1) ;
+      background: linear-gradient( rgb(0, 212, 255, 1), rgb(16, 139, 163));
       border-radius: 25px;
       width: 200px;
       height:40px;
@@ -98,3 +99,6 @@
       font-size: 50px;
       margin-left:10px;
   }
+figcaption {
+  text-transform:capitalize;
+}

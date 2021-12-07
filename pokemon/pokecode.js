@@ -19,6 +19,7 @@ function loadPokemon(offset = 0, limit = 25) {
     }
   })
 }
+loadPokemon 
 
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
@@ -89,7 +90,27 @@ function populatePokeCard(singlePokemon) {
   pokeScene.appendChild(pokeCard)
   pokeGrid.appendChild(pokeScene)
 }
+const allPokemon =[]
+const sortButton = document.querySelector('sortButton')
+sortButton.addEventListener('click', ()=>
+{ getAPIData(`https://pokeapi.com/api/v2/pokemon?limit=1118&offset=0`)
+  .then(async (data)=> {
+    for (const pokemon of data.results) {
+      await getAPIData(pokemon.url).then((pokeData) => {
+        const mappedPokemon = {
+          abilities: pokeData.abilities,
+          height: pokeData.height,
+          id: pokeDate.id,
+          name:pokeData.name,
+          types:pokeData.types,
+          weight:pokedata.weight
 
+        }
+        allPokemon.push(mappedPokemon)
+      })
+    }
+  })
+})
 function populateCardFront(pokemon) {
   const pokeFront = document.createElement('figure')
   pokeFront.className = 'cardFace front'
@@ -119,45 +140,49 @@ function typesBackground(pokemon, card) {
   let pokeType1 = pokemon.types[0].type.name
   let pokeType2 = pokemon.types[1]?.type.name
   console.log(pokeType1, pokeType2)
-  card.style.setProperty(
-    'background',
-    `linear-gradient(${getPokeTypeColor(pokeType1)}, #FFF})`,
-  )
+  if(!pokeType2) {
+    card.style.setProperty('background', getPokeTypeColor(pokeType1))
+  } else {
+    card.style.setProperty(
+      'background',
+      `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`,
+    )
+  }
 }
-
 function getPokeTypeColor(pokeType) {
   let color
   switch (pokeType) {
     case 'grass':
-      color = '#00FF00'
+      color = 'C1E1C1'
       break
     case 'fire':
       color = '#FF0000'
       break
     case 'water':
-      color = '#0000FF'
+      color = '#A7C7E7'
       break
     case 'bug':
-      color = '#7FFF00'
+      color = '#FFD1DC'
       break
     case 'normal':
       color = '#F5F5DC'
       break
     case 'flying':
-      color = '#00FFFF'
+      color = '#FDFD96'
       break
     case 'poison':
-      color = '#C300FF'
+      color = '#B39EB5'
       break
     case 'electric':
-      color = '#C8FF00'
+      color = '#EEE8AA'
       break
       case 'psychic':
-        color = '#333333'
+        color = '#E8C7C8'
         break
     default:
-      color = '#888888'
+      color = '#C0C0C0'
   }
+  return color 
 }
 
 //function populateCardBack(pokemon) {
@@ -182,5 +207,14 @@ function populateCardBack(pokemon) {
   pokeImg.src = `https://i.etsystatic.com/6015221/r/il/7c5de2/2211249220/il_794xN.2211249220_8bj8.jpg`
   pokeBack.appendChild(pokeImg)
 
-return pokeBack 
+  const typeslist = document.createElement('ol')
+  pokemon.types.forEach((pokeType) => {
+    let typeItem = document.createElement('li')
+    typeItem.textContent = pokeType.type.name
+    typeslist.appendChild(typeItem)
+  })
+  pokeBack.appendChild(abilityList)
+  pokeBack.appendChild(typeslist)
+  return pokeBack
 }
+
