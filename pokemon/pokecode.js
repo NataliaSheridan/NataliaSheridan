@@ -1,4 +1,4 @@
-import { removeChildren } from '../utils/index.js'
+]import { removeChildren } from '../utils/index.js'
 
 function getAPIData(url) {
   try {
@@ -19,13 +19,12 @@ function loadPokemon(offset = 0, limit = 25) {
     }
   })
 }
-loadPokemon 
 
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
-  loadPokemon(150, 30)
+  loadPokemon(100, 5)
 })
 
 const moreButton = document.querySelector('.morePokemon')
@@ -90,27 +89,7 @@ function populatePokeCard(singlePokemon) {
   pokeScene.appendChild(pokeCard)
   pokeGrid.appendChild(pokeScene)
 }
-const allPokemon =[]
-const sortButton = document.querySelector('sortButton')
-sortButton.addEventListener('click', ()=>
-{ getAPIData(`https://pokeapi.com/api/v2/pokemon?limit=1118&offset=0`)
-  .then(async (data)=> {
-    for (const pokemon of data.results) {
-      await getAPIData(pokemon.url).then((pokeData) => {
-        const mappedPokemon = {
-          abilities: pokeData.abilities,
-          height: pokeData.height,
-          id: pokeDate.id,
-          name:pokeData.name,
-          types:pokeData.types,
-          weight:pokedata.weight
 
-        }
-        allPokemon.push(mappedPokemon)
-      })
-    }
-  })
-})
 function populateCardFront(pokemon) {
   const pokeFront = document.createElement('figure')
   pokeFront.className = 'cardFace front'
@@ -119,20 +98,10 @@ function populateCardFront(pokemon) {
 
   const pokeCaption = document.createElement('figcaption')
   pokeCaption.textContent = pokemon.name
-
   pokeFront.appendChild(pokeImg)
   pokeFront.appendChild(pokeCaption)
- const label = document.createElement('h4')
- label.textContent = 'abilities'
- pokeFront.appendChild(label)
-  const abilityList = document.createElement('ul')
-  pokemon.abilities.forEach((abilityItem) => {
-    let listItem = document.createElement('li')
-    listItem.textContent = abilityItem.ability.name
-    abilityList.appendChild(listItem)
-  })
-    typesBackground(pokemon, pokeFront)
-    pokeFront.appendChild(abilityList)
+
+  //typesBackground(pokemon, pokeFront)
   return pokeFront
 }
 
@@ -140,81 +109,59 @@ function typesBackground(pokemon, card) {
   let pokeType1 = pokemon.types[0].type.name
   let pokeType2 = pokemon.types[1]?.type.name
   console.log(pokeType1, pokeType2)
-  if(!pokeType2) {
-    card.style.setProperty('background', getPokeTypeColor(pokeType1))
-  } else {
-    card.style.setProperty(
-      'background',
-      `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`,
-    )
-  }
+  card.style.setProperty(
+    'background',
+    `linear-gradient(${getPokeTypeColor(pokeType1)}, #FFF})`,
+  )
 }
+
 function getPokeTypeColor(pokeType) {
   let color
   switch (pokeType) {
     case 'grass':
-      color = 'C1E1C1'
+      color = '#00FF00'
       break
     case 'fire':
       color = '#FF0000'
       break
     case 'water':
-      color = '#A7C7E7'
+      color = '#0000FF'
       break
     case 'bug':
-      color = '#FFD1DC'
+      color = '#7FFF00'
       break
     case 'normal':
       color = '#F5F5DC'
       break
     case 'flying':
-      color = '#FDFD96'
+      color = '#00FFFF'
       break
     case 'poison':
-      color = '#B39EB5'
+      color = '#C300FF'
       break
     case 'electric':
-      color = '#EEE8AA'
+      color = '#C8FF00'
       break
       case 'psychic':
-        color = '#E8C7C8'
+        color = '#333333'
         break
     default:
-      color = '#C0C0C0'
+      color = '#888888'
   }
-  return color 
 }
 
-//function populateCardBack(pokemon) {
-  //const pokeBack = document.createElement('div')
-  //pokeBack.className = 'cardFace back'
-  //const label = document.createElement('h4')
-  //label.textContent = 'Abilities:'
-  //pokeBack.appendChild(label)
-  //const abilityList = document.createElement('ul')
-  //pokemon.abilities.forEach((abilityItem) => {
-    //let listItem = document.createElement('li')
-    //listItem.textContent = abilityItem.ability.name
-    //abilityList.appendChild(listItem)
-  //})
-  //pokeBack.appendChild(abilityList)
-  //return pokeBack
-//}
 function populateCardBack(pokemon) {
-  const pokeBack = document.createElement('figure')
+  const pokeBack = document.createElement('div')
   pokeBack.className = 'cardFace back'
-  const pokeImg = document.createElement('img')
-  pokeImg.src = `https://i.etsystatic.com/6015221/r/il/7c5de2/2211249220/il_794xN.2211249220_8bj8.jpg`
-  pokeBack.appendChild(pokeImg)
-
-  const typeslist = document.createElement('ol')
-  pokemon.types.forEach((pokeType) => {
-    let typeItem = document.createElement('li')
-    typeItem.textContent = pokeType.type.name
-    typeslist.appendChild(typeItem)
+  const label = document.createElement('h4')
+  label.textContent = 'Abilities:'
+  pokeBack.appendChild(label)
+  const abilityList = document.createElement('ul')
+  pokemon.abilities.forEach((abilityItem) => {
+    let listItem = document.createElement('li')
+    listItem.textContent = abilityItem.ability.name
+    abilityList.appendChild(listItem)
   })
   pokeBack.appendChild(abilityList)
-  pokeBack.appendChild(typeslist)
   return pokeBack
 }
-
