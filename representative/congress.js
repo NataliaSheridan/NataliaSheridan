@@ -2,7 +2,7 @@ import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
 
 const members = [...senators, ...representatives] // modern combining arrays like a genius
-
+console.log(members)
 const main = document.querySelector('#main')
 
 const mainHeader = document.createElement('header')
@@ -71,12 +71,13 @@ const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
 const biggestWeasel = simplifiedMembers().reduce((acc, senator) => 
 (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
 
-console.log(simplifiedMembers())
+//console.log(simplifiedMembers())
 const republicans = simplifiedMembers().filter(member => member.party === 'R')
 const democrats = simplifiedMembers().filter(member => member.party === 'D')
 const representativesdata = simplifiedMembers().filter(member => member.short_title === 'Rep.')
-console.log(representativesdata)
+//console.log(representativesdata)
 const senatorsdata = simplifiedMembers().filter(member => member.short_title === 'Sen.')
+console.log(senatorsdata)
 //console.log(democrats)
 
 
@@ -104,22 +105,13 @@ dembtn.addEventListener('click', () => {
 })
 const repbtn = document.getElementById("rep_btn")
 repbtn.addEventListener('click', () => {
-  populateSenatorDiv()
+  populateSenatorDiv(representativesdata)
 })
 const senbtn = document.getElementById("sen_btn")
 senbtn.addEventListener('click',() => {
- populateSenatorDiv(senatorsdata) 
+  populateSenatorDiv(senatorsdata)
+  console.log("click")
 })
-
-//const representativesButton = document.createElement('button')
-//representativesButton.textContent = "representatives"
-//representativesButton.addEventListener('click', () => populateDOM(representativesButton))
-//mainHeader.appendChild(representativesButton)//
-
-//const representativesButton = representatives.filter=((house) => house.short_title === 'Rep.')
-
-//const filteredArray = people.Array.filter(person =>
-//person.short_title === "rep")
 
 
 

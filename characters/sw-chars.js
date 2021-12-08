@@ -17,7 +17,7 @@ maleButton.addEventListener('click',() => populateDOM(maleCharacters))
 mainHeader.appendChild(maleButton)
 
 const femaleButton = document.createElement('button')
-femaleButton.textContent = "female characters"
+femaleButton.textContent = "Female characters"
 femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
 mainHeader.appendChild(femaleButton)
 
@@ -28,10 +28,9 @@ mainHeader.appendChild(othersButton)
 
 const maleCharacters = people.filter((person)=> person.gender === 'male')
 
-console.log(femaleCharacters.length)
 const femaleCharacters = people.filter((person) => person.gender === 'female')
 
-console.log(femaleCharacters.length)
+
 
 const otherCharacters = people.filter((person) => {
     if(
