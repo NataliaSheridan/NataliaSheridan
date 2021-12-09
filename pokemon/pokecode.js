@@ -15,6 +15,7 @@ function loadPokemon(offset = 0, limit = 25) {
     for (const pokemon of data.results) {
       await getAPIData(pokemon.url).then((pokeData) =>
         populatePokeCard(pokeData),
+        
       )
     }
   })
@@ -44,12 +45,6 @@ moreButton.addEventListener('click', () => {
   let offset = prompt('At which Pokemon ID should I start loading?')
   loadPokemon(offset, limit)
 })
-// const gameButton = document.getElementById(game_Button)
-// dembtn.addEventListener('click', () => {
-//   populatePokemon(gamePokemon)
-  
-// })
-// const gamepokemon = Pokemon().filter(species==="Bukbasaur")
 
 
 
@@ -61,6 +56,7 @@ newButton.addEventListener('click', () => {
   let pokeAbilities = prompt(
     'What are your Pokemon abilities? (use a comma separated list)',
   )
+  
   let types = [{type:{name:"normal"}}]
   let newPokemon = new Pokemon(
     pokeName,
@@ -73,6 +69,12 @@ newButton.addEventListener('click', () => {
   populatePokeCard(newPokemon)
 })
 
+const gameButton = document.querySelector('.morePokemon')
+gameButton.addEventListener('click', () => {
+  removeChildren(pokeGrid)
+  loadPokemon(150, 30)  
+  loadPokemon(150, 30)  
+})
 function getAbilitiesArray(commaString) {
   let tempArray = commaString.split(',')
   return tempArray.map((abilityName) => {
@@ -95,26 +97,6 @@ class Pokemon {
   }
 }
 
-function GameData(array){
-  
-}
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
 
 
 function populatePokeCard(singlePokemon) {
@@ -221,4 +203,25 @@ function populateCardFront(pokemon) {
   pokeFront.appendChild(pokeImg)
 
 return pokeFront 
+}
+
+function GameData(array){
+  
+}
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
 }
