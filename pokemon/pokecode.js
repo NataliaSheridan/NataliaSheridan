@@ -8,10 +8,12 @@ function getAPIData(url) {
   }
 }
 
-function loadPokemon(offset = 0, limit = 25) {
+function loadPokemon(offset = 0, limit = 25)
+ {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
   ).then(async (data) => {
+    
     for (const pokemon of data.results) {
       await getAPIData(pokemon.url).then((pokeData) =>
         populatePokeCard(pokeData),
@@ -35,8 +37,19 @@ function loadPokemon(offset = 0, limit = 25) {
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 loadButton.addEventListener('click', () => {
+  
   removeChildren(pokeGrid)
   loadPokemon(150, 30)  
+  loadPokemon(150, 30)
+  
+})
+const gameButton = document.querySelector('.gameButton')
+gameButton.addEventListener('click', () => {
+  
+  removeChildren(pokeGrid)
+  loadPokemon(150, 30)  
+  loadPokemon(150, 30)  
+  
 })
 
 const moreButton = document.querySelector('.morePokemon')
@@ -69,12 +82,12 @@ newButton.addEventListener('click', () => {
   populatePokeCard(newPokemon)
 })
 
-const gameButton = document.querySelector('.morePokemon')
-gameButton.addEventListener('click', () => {
-  removeChildren(pokeGrid)
-  loadPokemon(150, 30)  
-  loadPokemon(150, 30)  
-})
+
+
+
+
+
+
 function getAbilitiesArray(commaString) {
   let tempArray = commaString.split(',')
   return tempArray.map((abilityName) => {
@@ -205,9 +218,7 @@ function populateCardFront(pokemon) {
 return pokeFront 
 }
 
-function GameData(array){
-  
-}
+
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
@@ -221,7 +232,24 @@ function shuffle(array) {
     // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]];
+      const shuffledArr = shuffle(array);
   }
 
   return array;
 }
+//  function shuffle(array) {
+//     var currentIndex = array.length,
+//       temporaryValue,
+//       randomIndex;
+//     // While there remain elements to shuffle...
+//     while (0 !== currentIndex) {
+//       // Pick a remaining element...
+//       randomIndex = Math.floor(Math.random() * currentIndex);
+//       currentIndex -= 1;
+//       // And swap it with the current element.
+//       temporaryValue = array[currentIndex];
+//       array[currentIndex] = array[randomIndex];
+//       array[randomIndex] = temporaryValue;
+//     }
+//     return array;
+//   }
