@@ -167,7 +167,7 @@ function getPokeTypeColor(pokeType) {
   let color
   switch (pokeType) {
     case 'grass':
-      color = '#77DD77'
+      color = '#C3FDB8'
       break
     case 'fire':
       color = '#B0E0E6'
@@ -185,7 +185,7 @@ function getPokeTypeColor(pokeType) {
       color = '#FDCD6'
       break
     case 'poison':
-      color = '#C300FF'
+      color = '#BdeDef'
       break
     case 'electric':
       color = '#DCDCDC'

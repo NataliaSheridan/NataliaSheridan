@@ -134,7 +134,7 @@ H4 {
   height: 50px;
 }
 .icons:hover {
-  background-color: #1f1d59;
+  background-color: #302b97;
   transform: scale(1.5);
 }
 .icons {
@@ -143,6 +143,7 @@ H4 {
   justify-content: space-evenly;
   flex-direction: row;
   margin:0 auto;
+  background-color: white;
 }
 .caption {
   color: #ffffff;
