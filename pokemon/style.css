@@ -2,6 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   
+  
 }
 .pokeGrid {
   display: flex;
@@ -79,10 +80,12 @@ figure img {
 }
 body {
   background: rgb(188,161,221);
-  background: linear-gradient(180deg, rgba(188,161,221,1) 0%, rgba(120,189,198,1) 53%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(180deg, rgba(188,161,221,1) 0%, rgba(120,189,198,1) 53%, rgba(0,212,255,1) min-height 100%);
     font-family: 'Caveat', cursive;
     color:white;  
     text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
+  
+    
 }
 button{
     color:white;
