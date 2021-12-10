@@ -8,6 +8,7 @@
   position: fixed;
   background-color: #011140;
   width: 100%;
+  background-image: url("images/background.jpg");
 }
 .nav-list {
   display: flex;
@@ -41,6 +42,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 #projects {
@@ -52,12 +54,11 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-
-  background-color: #d92e1e;
+ 
 }
 
 .dragon {
-  height: 150px;
+  height: 250px;
   width: auto;
   flex-wrap: wrap;
   display: flex;
@@ -66,10 +67,11 @@
   margin: 2rem;
 }
 #contact {
-  background-color: #d92e1e;
+  background-color: #d92e1e; background-color: #d92e1e;
   height: 20vh;
   justify-content: center;
   align-items: center;
+  background-image: url("images/background.jpg");
 }
 
 #contact div a {
@@ -79,8 +81,9 @@
 h1 {
   color: #ffffff;
   font-family: 'Fruktur', cursive;
-  font-size: xx-large;
+  font-size: 40px;
   text-shadow: 4px 4px 4px #1f1d59;
+ 
 }
 h2 {
   color: #ffffff;
@@ -103,11 +106,12 @@ footer {
   font-family: 'Fruktur', cursive;
 }
 H4 {
-  font-size: xx-large;
-  color: #1f1d59;
+  font-size: 40px;
+  color: #dbdbdb;
   font-family: 'Fruktur', cursive;
-  text-shadow: 4px 4px 4px#110f31;
+  text-shadow: 4px 4px 4px#030303;
   text-align: center;
+  
 }
 .phone {
   width: 50px;
@@ -131,7 +135,6 @@ H4 {
 }
 .icons:hover {
   background-color: #1f1d59;
-  color: #76bf41;
   transform: scale(1.5);
 }
 .icons {
@@ -144,11 +147,15 @@ H4 {
 .caption {
   color: #ffffff;
   font-family: 'Fruktur', cursive;
+  font-size: 25px;
 }
 .divicons{
   display:flex;
   justify-content: space-evenly;
 }
 img {
-  box-shadow:1px 1px 2px 3px black;
+  box-shadow:1px 1px 2px 3px rgb(252, 250, 250);
+}
+body {
+  background-color: #011140;
 }

@@ -34,9 +34,11 @@ main {
   
   figure img {
     width: 200px;
+    border:gold 2px solid;
   }
   body{
     margin:0;
     padding:2em;
     border: 5px solid gold;
+    
   }

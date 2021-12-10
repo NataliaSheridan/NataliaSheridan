@@ -7,6 +7,7 @@ function getAPIData(url) {
   } catch (error) {
     console.error(error)
     
+    
   }
 }
 
@@ -36,6 +37,7 @@ loadButton.addEventListener('click', () => {
 })
 const gameButton = document.querySelector('.gameButton')
 gameButton.addEventListener('click', () => {
+
   
   removeChildren(pokeGrid)
   loadPokemon(350, 20)  
@@ -122,29 +124,29 @@ function populatePokeCard(singlePokemon) {
   pokeGrid.appendChild(pokeScene)
 }
 
-function populateCardBack(pokemon) {
-  const pokeBack = document.createElement('figure')
-  pokeBack.className = 'cardFace back'
+function populateCardFront(pokemon) {
+  const pokeFront = document.createElement('figure')
+  pokeFront.className = 'cardFace front'
   const pokeImg = document.createElement('img')
   pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
 
   const pokeCaption = document.createElement('figcaption')
   pokeCaption.textContent = pokemon.name
 
-  pokeBack.appendChild(pokeImg)
-  pokeBack.appendChild(pokeCaption)
+  pokeFront.appendChild(pokeImg)
+  pokeFront.appendChild(pokeCaption)
  const label = document.createElement('h4')
  label.textContent = 'abilities'
- pokeBack.appendChild(label)
+ pokeFront.appendChild(label)
   const abilityList = document.createElement('ul')
   pokemon.abilities.forEach((abilityItem) => {
     let listItem = document.createElement('li')
     listItem.textContent = abilityItem.ability.name
     abilityList.appendChild(listItem)
   })
-    typesBackground(pokemon, pokeBack)
-    pokeBack.appendChild(abilityList)
-  return pokeBack
+    typesBackground(pokemon, pokeFront)
+    pokeFront.appendChild(abilityList)
+  return pokeFront
 }
 
 function typesBackground(pokemon, card) {
@@ -200,35 +202,18 @@ function getPokeTypeColor(pokeType) {
   return color
 }
 
-function populateCardFront(pokemon) {
-  const pokeFront = document.createElement('figure')
-  pokeFront.className = 'cardFace front'
+function populateCardBack(pokemon) {
+  const pokeBack = document.createElement('figure')
+  pokeBack.className = 'cardFace back'
   const pokeImg = document.createElement('img')
   pokeImg.src = `https://i.etsystatic.com/6015221/r/il/7c5de2/2211249220/il_794xN.2211249220_8bj8.jpg`
-  pokeFront.appendChild(pokeImg)
+  pokeBack.appendChild(pokeImg)
 
-return pokeFront 
+return pokeBack
 }
 
 
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
 
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-      const shuffledArr = shuffle(array);
-  }
-
-  return array;
-}
 //  function shuffle(array) {
 //     var currentIndex = array.length,
 //       temporaryValue,
@@ -245,3 +230,36 @@ function shuffle(array) {
 //     }
 //     return array;
 //   }
+const allPokemon = await getAllSimplePokemon()
+
+async function getAllSimplePokemon() {
+  const allPokemon = []
+  await getAPIData(
+    `https://pokeapi.co/api/v2/pokemon?limit=1118&offset=0`,
+  ).then(async (data) => {
+    for (const pokemon of data.results) {
+      await getAPIData(pokemon.url).then((pokeData) => {
+        const mappedPokemon = {
+          abilities: pokeData.abilities,
+          height: pokeData.height,
+          id: pokeData.id,
+          name: pokeData.name,
+          types: pokeData.types,
+          weight: pokeData.weight,
+        }
+        allPokemon.push(mappedPokemon)
+      })
+    }
+  })
+  return allPokemon
+}
+function getAllPokemonByType(type) {
+  return allPokemon.filter((pokemon) => pokemon.types[0].type.name == type)
+}
+const typeSelector = document.querySelector('#typeSelector')
+typeSelector.addEventListener('change', (event) => {
+  const usersTypeChoice = event.target.value.toLowerCase()
+  const allByType = getAllPokemonByType(usersTypeChoice)
+  removeChildren(pokeGrid)
+  allByType.forEach((item) => populatePokeCard(item))
+})

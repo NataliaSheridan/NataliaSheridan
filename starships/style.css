@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    background-color: black;
+   
    
   }
   
@@ -10,6 +10,7 @@
   font-size: 4em;
   text-align: center;
   text-shadow: 1px 1px 2px #ffffff;
+ 
   
   }
   footer {
@@ -54,6 +55,7 @@
     margin:0;
     padding:2em;
     border: 5px solid gold;
+    background-color: black;
   }
 li:hover{
 color:white;

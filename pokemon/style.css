@@ -39,15 +39,16 @@
   transform: rotateY(180deg);
 }
 
-.front {
+.back {
   background: rgb(211, 122, 189);
   border: solid black 2px;
  
   text-align: center;
   text-transform:capitalize;
+  transform: rotateY(180deg);
 }
 
-.front img {
+.back img {
   width:190px;
   height:auto; 
   justify-content: center;
@@ -56,13 +57,11 @@
   margin-right: auto;
   margin-top: 25px;
 }
-.back {
-  background: rgb(178, 236, 204);
-  transform: rotateY(180deg);
-  border:outset black 2px;
+.front{
+ border:outset black 2px;
   font-size: large;
 }
-.back img {
+.front img {
   justify-content: center;
   display: flex;
   margin-left: auto;
@@ -82,8 +81,8 @@ body {
   background: rgb(188,161,221);
   background: linear-gradient(180deg, rgba(188,161,221,1) 0%, rgba(120,189,198,1) 53%, rgba(0,212,255,1) min-height 100%);
     font-family: 'Caveat', cursive;
-    color:white;  
-    text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
+    
+   
   
     
 }
@@ -92,14 +91,26 @@ button{
     text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
     background-color: rgb(0, 212, 255, 1) ;
     border-radius: 25px;
-    width: 200px;
-    height:40px;
+    width: 250px;
+    height:60px;
     margin-left:10px;
+   font-size: 20px;
   
     
   
 }
 h1 {
     font-size: 50px;
+    color:white;  
     margin-left:10px;
+}
+#typeSelector {
+  color:white;
+  text-shadow: rgb(77, 74, 74) 2px 1px 1px ;
+  background-color: rgb(0, 212, 255, 1) ;
+  border-radius: 25px;
+  width: 250px;
+  height:60px;
+  margin-left:10px;
+ font-size: 20px;
 }
