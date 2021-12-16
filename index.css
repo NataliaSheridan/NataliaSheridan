@@ -36,7 +36,7 @@
   background-color:#0460d9;
 }
 #welcome-section {
-  background-color: #03258C;
+  background-color:rgb(80, 137, 175);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -161,5 +161,5 @@ body {
   background-color: #011140;
 }
 .caption:hover {
-  color:rgb(147, 147, 194);
+  color:rgb(80, 137, 175);
 }
