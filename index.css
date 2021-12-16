@@ -33,7 +33,7 @@
   font-size: xx-large;
 }
 .nav-list a:hover {
-  background-color:#0460d9;
+  background-color:rgb(80, 137, 175)
 }
 #welcome-section {
   background-color:rgb(80, 137, 175);
@@ -67,7 +67,7 @@
   margin: 2rem;
 }
 #contact {
-  background-color: #d92e1e; background-color: #d92e1e;
+  background-color: #d92e1e; 
   height: 20vh;
   justify-content: center;
   align-items: center;
