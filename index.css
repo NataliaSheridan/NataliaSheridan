@@ -160,3 +160,6 @@ img {
 body {
   background-color: #011140;
 }
+.caption:hover {
+  color:rgb(147, 147, 194);
+}
