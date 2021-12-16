@@ -168,14 +168,20 @@ function getPokeTypeColor(pokeType) {
     case 'grass':
       color = '#C3FDB8'
       break
+    case 'fighting':
+        color = '#FFFFE0'
+        break
+    case 'ice':
+          color = '#87cefa'
+          break
     case 'fire':
-      color = '#B0E0E6'
+      color = '#ffcccb'
       break
     case 'water':
       color = '#A7C7E7'
       break
     case 'bug':
-      color = '#7FFF00'
+      color = '#20b2aa'
       break
     case 'normal':
       color = 'FFB6C1'
@@ -196,7 +202,8 @@ function getPokeTypeColor(pokeType) {
         color = '#C0C0C0'
         break
     default:
-      color = '#888888'
+      color
+       = '#888888'
   }
   return color
 }
