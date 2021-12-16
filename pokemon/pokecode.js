@@ -32,7 +32,6 @@ loadButton.addEventListener('click', () => {
   
   removeChildren(pokeGrid)
   loadPokemon(150, 30)  
-  loadPokemon(150, 30)
   
 })
 const gameButton = document.querySelector('.gameButton')
@@ -190,11 +189,11 @@ function getPokeTypeColor(pokeType) {
     case 'electric':
       color = '#DCDCDC'
       break
-      case 'psychic':
+    case 'psychic':
         color = 'pink'
         break
-        case 'ground':
-        color = '#0F0F0F'
+    case 'ground':
+        color = '#C0C0C0'
         break
     default:
       color = '#888888'
